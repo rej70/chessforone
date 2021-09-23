@@ -5,22 +5,8 @@ const Array21 = () => {
     const [isActive, setIsActive] = useState(false);
     const [jumpingPiece, setJumpingPiece] = useState(null);
     const [jumpedPiece, setJumpedPiece] = useState(null);
-    //pawn=0,rook=1,knight=2,bishop=3,queen=4,king=5
+    //pawn=0,rook=1,knight=2,bishop=3,queen=4,king=5    
     
-    //const [stars, setStars] = useState(utils.random(1, 9));
-
-    const randomBoard = [
-        [null, null, ["rook", 0, 2], null],
-        [["knight", 1, 0], ["pawn", 1, 1], null, ["bishop", 1, 3]],
-        [null, null, null, null],
-        [null, null, null, null]
-    ];
-    //const [board, setBoard] = useState([randomBoard]);
-    //if it might vary
-    //const foo: (string|number|null)[][] = [[ "message", 7, 5 ],[ "griff", 2, 3 ]];
-    //if its definite
-    //[[string, string, number, number]] = [    ["aliceblue", "#f0f8ff", 240, 248, 255], ... ];
-
     const [board, setBoard] = useState([
         [null, null, ["rook", 0, 2], null],
         [["knight", 1, 0], ["pawn", 1, 1], null, ["bishop", 1, 3]],
@@ -35,8 +21,6 @@ const Array21 = () => {
     //second click is on an occupied square. If so, and provided it passes validation as a legal move,
     //the code will 'replace' the piece with the jumnping piece
     const activate = (value: any) => {
-        console.log("foo is a mixed array: " + foo);  
-
         console.log("value: " + value);  
         
         if(isActive){  //if true, this is a 'jump' move           
