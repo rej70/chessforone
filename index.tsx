@@ -1,3 +1,5 @@
+import React, { useContext, useState } from 'react';
+
 var i:number; 
 for (i = 1; i <= 100; i++)  
 {  
