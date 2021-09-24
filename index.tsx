@@ -5,6 +5,19 @@ const Array21 = () => {
     const [isActive, setIsActive] = useState(false);
     const [jumpingPiece, setJumpingPiece] = useState(null);
     const [jumpedPiece, setJumpedPiece] = useState(null);
+    
+    /**
+    * Gets random int
+    * @param min 
+    * @param max 
+    * @returns random int - min & max inclusive
+    */
+    getRandomInt(min, max) : number{
+	    min = Math.ceil(min);
+	    max = Math.floor(max);
+	    return Math.floor(Math.random() * (max - min + 1)) + min; 
+    }
+    
     //pawn=0,rook=1,knight=2,bishop=3,queen=4,king=5    
     
     const [board, setBoard] = useState([
