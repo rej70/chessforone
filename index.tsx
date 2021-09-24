@@ -17,6 +17,8 @@ const Array21 = () => {
 	    max = Math.floor(max);
 	    return Math.floor(Math.random() * (max - min + 1)) + min; 
     }
+	
+    const numero = [1, 2, 3, 4, 5];
     
     //pawn=0,rook=1,knight=2,bishop=3,queen=4,king=5    
     
@@ -34,6 +36,10 @@ const Array21 = () => {
     //second click is on an occupied square. If so, and provided it passes validation as a legal move,
     //the code will 'replace' the piece with the jumnping piece
     const activate = (value: any) => {
+	//REJ DO - some code demo-ing the use of getRandomInt()
+	const randomInt = numero[getRandomInt(1, 5)];   
+	console.log("random Integer: " + randomInt);
+	    
         console.log("value: " + value);  
         
         if(isActive){  //if true, this is a 'jump' move           
