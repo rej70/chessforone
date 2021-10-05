@@ -19,9 +19,33 @@ const Array21 = () => {
     }
 	
     const numero = [1, 2, 3, 4, 5];
+	
+    const [element1, setElement1] = useState(1);
+
+    const handleElement1 = (value: string) => {
+        var y: number = +value; 
+        setElement1(y);
+    };
     
     //pawn=0,rook=1,knight=2,bishop=3,queen=4,king=5    
-    
+    const randomBoard = [[
+        [null, null, null, null],
+        [null, null, null, null],
+        [null, null, ["rook", 2, 2], null],
+        [["knight", 3, 0], ["pawn", 3, 1], null, ["bishop", 3, 3]]        
+    ],[
+        [null, null, ["rook", 0, 2], null],
+        [["knight", 1, 0], ["pawn", 1, 1], null, ["bishop", 1, 3]],
+        [null, null, null, null],
+        [null, null, null, null]
+    ],[
+        [null, null, null, null],
+        [null, null, ["rook", 1, 2], null],
+        [["knight", 2, 0], ["pawn", 2, 1], null, ["bishop", 2, 3]],
+        [null, null, null, null]        
+    ]];
+	
+	
     const [board, setBoard] = useState([
         [null, null, ["rook", 0, 2], null],
         [["knight", 1, 0], ["pawn", 1, 1], null, ["bishop", 1, 3]],
@@ -79,7 +103,9 @@ const Array21 = () => {
     
     return(
         <div>
-            <p>Array21</p>        
+            <p>Array21</p>
+	    <button onClick={() => setBoard(randomBoard[element1])}> initialize or reset board </button>                
+            use this board:<input type="text" id="element1" value={element1} onChange={(e) => handleElement1(e.target.value)} /><br />    
             <div style={{width:"260px", height:"260px", display: "flex", alignItems: "center", flexWrap: "wrap"}}>
                 {flat.map((value) => {
                   return <button style={{width: "25%", height: "25%"}} onClick={() => activate(value)}> {value} </button>;                    
