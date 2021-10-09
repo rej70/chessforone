@@ -27,6 +27,9 @@ const Array21 = () => {
         setElement1(y);
     };
     
+    //chess image variable - 'img' element is set to this string filepath [will use such a thing on the chessboard]	
+    const [chessImage, setChessImage] = useState("/assets/images/pawn.png");			
+	
     //pawn=0,rook=1,knight=2,bishop=3,queen=4,king=5    
     const randomBoard = [[
         [null, null, null, null],
@@ -112,6 +115,7 @@ const Array21 = () => {
                 })}
             </div>
             <br />
+		<img src={chessImage} alt="" />    
         </div>
     );
 };
