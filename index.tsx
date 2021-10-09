@@ -108,7 +108,7 @@ const Array21 = () => {
             use this board:<input type="text" id="element1" value={element1} onChange={(e) => handleElement1(e.target.value)} /><br />    
             <div style={{width:"260px", height:"260px", display: "flex", alignItems: "center", flexWrap: "wrap"}}>
                 {flat.map((value) => {
-                  return <button style={{width: "25%", height: "25%"}} onClick={() => activate(value)}> {value} <img src="/assets/images/apple-touch-icon.png" alt="" />   </button>;                    
+                  return <button style={{width: "25%", height: "25%"}} onClick={() => activate(value)}> {value} <img src="/pawn.png" alt="" />   </button>;                    
                 })}
             </div>
             <br />
